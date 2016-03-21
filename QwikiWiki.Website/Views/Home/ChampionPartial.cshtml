@@ -1,0 +1,42 @@
+﻿@model QwikiWiki.Common.Models.ChampionModel
+@using QwikiWiki.Helpers
+
+@if (Model != null)
+{
+    <div class="Champion @Model.PrimaryRole @string.Format("Secondary{0}",Model.SecondaryRole) " data-championrole="@Model.RoleText" data-championroleabbr="@Model.RoleTextAbbr" data-championname="@Model.Name.ToLower()">
+        <div class="Overview">
+            <div class="ChampionName">
+                <h2>@Model.Name </h2>
+            </div>
+            <img class="championImg" src="@Model.ImgUrl" alt="@Model.Name">
+            <div class="roleImgDiv">
+                <img class="roleImg" title="@Model.PrimaryRole" src="~/Content/images/roleIcons/@string.Format("{0}100.png",Model.PrimaryRole.ToLower())" alt="@Model.PrimaryRole"/>
+                @if (!string.IsNullOrEmpty(Model.SecondaryRole))
+                {
+                    <img class="role2Img" title="@Model.SecondaryRole" src="~/Content/images/roleIcons/@string.Format("{0}100.png",Model.SecondaryRole.ToLower())" alt="@Model.SecondaryRole"/>
+                }
+            </div>
+            @*@Model.IsFreeToPlay<br />
+                @Model.Price<br />*@
+        </div>
+
+        <div class="spellWrapper">
+            <div class="Passive">
+                @Html.CreateSpellLayout(Model.Passive)
+            </div>
+            <div class="QSpell spellDiv">
+                @Html.CreateSpellLayout(Model.QSpell)<div class="spellLetter">Q</div>
+            </div>
+            <div class="WSpell spellDiv">
+                @Html.CreateSpellLayout(Model.WSpell)<div class="spellLetter">W</div>
+            </div>
+            <div class="ESpell spellDiv">
+                @Html.CreateSpellLayout(Model.ESpell)<div class="spellLetter">E</div>
+            </div>
+            <div class="RSpell spellDiv">
+                @Html.CreateSpellLayout(Model.RSpell)<div class="spellLetter">R</div>
+            </div>
+        </div>
+        <div class="expandChampion" data-championname="@Model.Name.ToLower()"></div>
+    </div>
+}

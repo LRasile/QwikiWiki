@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QwikiWiki</title>
+    <link rel="icon" href="@Url.Content("~/Content/favicon.ico")" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <div class="container">
+        <div class="adBanner">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- QwikiWikiAd -->
+            <ins class="adsbygoogle"
+                 style="display: block"
+                 data-ad-client="ca-pub-5946980563937973"
+                 data-ad-slot="6888930049"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="headerBackground">
+            <div class="header">
+                <div class="headerLeft">
+                    <img title="QwikiWiki" alt="QwikiWiki" id="logo" src="~/Content/images/logos/QwikiWikiLogo300px.png" />
+
+                </div>
+                <div class="headerRight">
+
+                    <div class="divSearch">
+                        <input type="text" id="txtSearch" style="text-align: center; display: inline;" placeholder="Champion Search" /><span id="clearSearch">x</span>
+                    </div>
+                    <br />
+                    <div class="ColourLegend">
+                        <div class="Tank" onclick=" RoleFilter('Tank'); ">
+                            <img title="Tank" src="~/Content/images/roleIcons/tank60.png" />
+                        </div>
+                        <div class="Support" onclick=" RoleFilter('Support'); ">
+                            <img title="Support" src="~/Content/images/roleIcons/support60.png" />
+                        </div>
+                        <div class="Marksman" onclick=" RoleFilter('Marksman'); ">
+                            <img title="Marksman" src="~/Content/images/roleIcons/marksman60.png" />
+                        </div>
+                        <div class="Mage" onclick=" RoleFilter('Mage'); ">
+                            <img title="Mage" src="~/Content/images/roleIcons/mage60.png" />
+                        </div>
+                        <div class="Fighter" onclick=" RoleFilter('Fighter'); ">
+                            <img title="Fighter" src="~/Content/images/roleIcons/fighter60.png" />
+                        </div>
+                        <div class="Assassin" onclick=" RoleFilter('Assassin'); ">
+                            <img title="Assassin" src="~/Content/images/roleIcons/assassin60.png" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="innerContainer">
+            @RenderBody()
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/qwikiwiki")
+            @RenderSection("scripts", required: false)
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerText">
+            QwikiWiki isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends.
+            League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0A93B168-0BC5-4D46-B51C-80798F93CD95}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QwikiWiki.Website", "QwikiWiki.Website\QwikiWiki.Website.csproj", "{4494CA49-18CF-4BC9-9767-10525FE63F67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QwikiWiki.BusinessLogic", "QwikiWiki.BusinessLogic\QwikiWiki.BusinessLogic.csproj", "{E46CDBE5-1336-4B0F-963E-63BD0D4C7AE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QwikiWiki.Common", "QwikiWiki.Common\QwikiWiki.Common.csproj", "{EA4E0471-B59B-447F-9B6B-6D3D5EC5DA47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QwikiWiki.DataLayer", "QwikiWiki.DataLayer\QwikiWiki.DataLayer.csproj", "{564FF9B5-1021-466D-B4D9-E92FC2D83C4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4494CA49-18CF-4BC9-9767-10525FE63F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4494CA49-18CF-4BC9-9767-10525FE63F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4494CA49-18CF-4BC9-9767-10525FE63F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4494CA49-18CF-4BC9-9767-10525FE63F67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E46CDBE5-1336-4B0F-963E-63BD0D4C7AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E46CDBE5-1336-4B0F-963E-63BD0D4C7AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E46CDBE5-1336-4B0F-963E-63BD0D4C7AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E46CDBE5-1336-4B0F-963E-63BD0D4C7AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA4E0471-B59B-447F-9B6B-6D3D5EC5DA47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA4E0471-B59B-447F-9B6B-6D3D5EC5DA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA4E0471-B59B-447F-9B6B-6D3D5EC5DA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA4E0471-B59B-447F-9B6B-6D3D5EC5DA47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{564FF9B5-1021-466D-B4D9-E92FC2D83C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564FF9B5-1021-466D-B4D9-E92FC2D83C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564FF9B5-1021-466D-B4D9-E92FC2D83C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564FF9B5-1021-466D-B4D9-E92FC2D83C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

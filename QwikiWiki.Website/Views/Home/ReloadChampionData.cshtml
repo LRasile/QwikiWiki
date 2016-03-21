@@ -1,0 +1,40 @@
+﻿@model QwikiWiki.Common.Models.ReloadChampionDataViewModel
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { @id = "ReloadDataForm", @onsubmit = "return confirm('Dop you want to reload the data?');" }))
+{
+    <div class="innerContainer">
+        <div class="divRow">
+            <div class="divRowLeft">
+                @Html.LabelFor(m => m.Username)
+            </div>
+            <div class="divRowRight">
+                @Html.TextBoxFor(m => m.Username)
+            </div>
+        </div>
+        <div class="divRow">
+            <div class="divRowLeft">
+                @Html.LabelFor(m => m.Password)
+            </div>
+            <div class="divRowRight">
+                @Html.PasswordFor(m => m.Password)
+            </div>
+        </div>
+        <div class="divRow">
+            <div class="divRowLeft">
+                @Html.LabelFor(m => m.ApiKey)
+            </div>
+            <div class="divRowRight">
+                @Html.TextBoxFor(m => m.ApiKey)
+            </div>
+        </div>
+        <div class="divRow">
+            <div class="divRowLeft"></div>
+            <div class="divRowRight">
+                <input type="submit" value="Load Data" />
+            </div>
+        </div>
+        <div class="divRow">
+            @Model.Message
+        </div>
+    </div>
+}
