@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using QwikiWiki.Common.LocalDtos;
 using QwikiWiki.Common.Models;
 using QwikiWiki.DataLayer;
@@ -13,13 +12,16 @@ namespace QwikiWiki.BusinessLogic
             return DataLayerProvider.GetDataAccess().GetVersionNumber();
         }
 
-        public List<ChampionModel> GetChampionModels()
+        public List<SimpleChampionModel> GetSimpleChampionModels()
         {
-            List<ChampionLocalDto> championLocalDtos = DataLayerProvider.GetDataAccess().GetChampions();
+            List<SimpleChampionModel> simpleChampionModels = DataLayerProvider.GetDataAccess().GetSimpleChampions();
+            return simpleChampionModels; 
+        }
 
-            List<ChampionModel> result = championLocalDtos.Select(GenerateChampionModel).ToList();
-
-            return result; 
+        public ChampionModel GetChampion(int championId)
+        {
+            ChampionLocalDto championDto = new DataAccess().GetChampion(championId);
+            return GenerateChampionModel(championDto);
         }
 
         private ChampionModel GenerateChampionModel(ChampionLocalDto championLocalDto)
@@ -31,5 +33,6 @@ namespace QwikiWiki.BusinessLogic
 
             return championModel;
         }
+
     }
 }

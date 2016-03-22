@@ -6,7 +6,7 @@ namespace QwikiWiki.DataLayer
 {
     public interface IDataAccess
     {
-        List<ChampionLocalDto> GetChampions();
+        List<SimpleChampionModel> GetSimpleChampions();
 
         SpellModel[] GetSpells(ChampionLocalDto championLocalDto);
 

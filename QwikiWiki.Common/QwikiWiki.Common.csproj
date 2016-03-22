@@ -65,6 +65,8 @@
     <Compile Include="Models\ChampionModel.cs" />
     <Compile Include="Models\ChampionModelBuilder.cs" />
     <Compile Include="Models\ChampionListViewModel.cs" />
+    <Compile Include="Models\ChampionModelBase.cs" />
+    <Compile Include="Models\SimpleChampionModel.cs" />
     <Compile Include="Models\SpellModel.cs" />
     <Compile Include="Models\SpellModelBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

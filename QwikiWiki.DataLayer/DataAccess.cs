@@ -11,15 +11,15 @@ namespace QwikiWiki.DataLayer
     public class DataAccess : IDataAccess
     {
         //Public Methods
-        public List<ChampionLocalDto> GetChampions()
+        public List<SimpleChampionModel> GetSimpleChampions()
         {
             SqlCommand command = new SqlCommand
             {
-                CommandText = "GetChampions",
+                CommandText = "GetSimpleChampions",
                 CommandType = CommandType.StoredProcedure
             };
 
-            List<ChampionLocalDto> result = SQLHelper.GetEntityList<ChampionLocalDto>(ref command);
+            List<SimpleChampionModel> result = SQLHelper.GetEntityList<SimpleChampionModel>(ref command);
 
             return result;
         }
@@ -235,5 +235,17 @@ namespace QwikiWiki.DataLayer
             return result;
         }
 
+        public ChampionLocalDto GetChampion(int championId)
+        {
+            SqlCommand comm = new SqlCommand
+            {
+                CommandText = "GetChampion",
+                CommandType = CommandType.StoredProcedure
+            };
+            comm.Parameters.AddWithValue("@id", championId);
+
+            ChampionLocalDto championLocalDto = SQLHelper.GetEntity<ChampionLocalDto>(ref comm);
+            return championLocalDto;
+        }
     }
 }

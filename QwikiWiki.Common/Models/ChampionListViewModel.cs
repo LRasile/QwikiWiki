@@ -6,7 +6,7 @@ namespace QwikiWiki.Common.Models
     {
         //would be nice to configure details depending on patch
         //public List<string> PatchList { get; set; }
-        public List<ChampionModel> ChampionList { get; set; }
+        public List<SimpleChampionModel> ChampionList { get; set; }
 
         public string Version { get; set; }
     }

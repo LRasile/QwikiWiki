@@ -1,24 +1,10 @@
-﻿using System;
-using System.ComponentModel;
-using System.Collections.Generic;
+﻿using System.ComponentModel;
 using QwikiWiki.Common.Dtos;
 
 namespace QwikiWiki.Common.Models
 {
-    public class ChampionModel
+    public class ChampionModel : ChampionModelBase
     {
-        [DisplayName("Id")]
-        public int Id { get; set; }
-        [DisplayName("Name")]
-        public string Name { get; set; }
-        [DisplayName("Title")]
-        public string Title { get; set; }
-        [DisplayName("PrimaryRole")]
-        public string PrimaryRole { get; set; }
-        [DisplayName("SecondaryRole")]
-        public string SecondaryRole { get; set; }
-        [DisplayName("ImgUrl")]
-        public string ImgUrl { get; set; }
         [DisplayName("Price")]
         public string Price { get; set; }
         [DisplayName("IsFreeToPlay")]
@@ -35,31 +21,6 @@ namespace QwikiWiki.Common.Models
         public SpellModel RSpell { get; set; }
 
         public InfoDto Info { get; set; }
-
-        public string RoleText
-        {
-            get
-            {
-                string roleText = PrimaryRole + "," + SecondaryRole;
-                return roleText;
-            }
-        }
-
-        public string RoleTextAbbr
-        {
-            get
-            {
-                string roleTextAbbr = PrimaryRole + "," + SecondaryRole;
-                if (roleTextAbbr.ToLower().IndexOf("marksman", StringComparison.Ordinal) > -1)
-                {
-                    roleTextAbbr = roleTextAbbr.Replace("Marksman", "ADC");
-                }
-                if (roleTextAbbr.ToLower().IndexOf("mage", StringComparison.Ordinal) > -1)
-                {
-                    roleTextAbbr = roleTextAbbr.Replace("Mage", "APC");
-                }
-                return roleTextAbbr;
-            }
-        }
+        
     }
 }

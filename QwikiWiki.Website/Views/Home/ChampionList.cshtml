@@ -1,28 +1,7 @@
 ﻿@using QwikiWiki.Common.Models;
 <div class="Version">v @Model.Version</div>
-<div class="ChampionList">
-    <div id="ColumnHeadings">
-        <div class="Overview">
-            <h2>Overview</h2>
-        </div>
-        <div class="Passive">
-            <h2>Passive</h2>
-        </div>
-        <div class="QSpell">
-            <h2>Q Spell</h2>
-        </div>
-        <div class="WSpell">
-            <h2>W Spell</h2>
-        </div>
-        <div class="ESpell">
-            <h2>E Spell</h2>
-        </div>
-        <div class="RSpell">
-            <h2>R Spell</h2>
-        </div>
-    </div>
-</div>  
-@foreach (ChampionModel champion in Model.ChampionList)
+
+@foreach (SimpleChampionModel champion in Model.ChampionList)
 {
-    @Html.Partial("ChampionPartial", champion)
+    @Html.Partial("SimpleChampionPartial", champion)
 }

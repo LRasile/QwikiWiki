@@ -1,0 +1,26 @@
+﻿@model QwikiWiki.Common.Models.SimpleChampionModel
+@using QwikiWiki.Helpers
+
+@if (Model != null)
+{
+    <div id="@Model.Name-@Model.Id" class="Champion" data-championrole="@Model.RoleText" data-championroleabbr="@Model.RoleTextAbbr"
+          data-championname="@Model.Name.ToLower()" >
+        <a href='Champion/@Model.Name.Replace("'","")'>
+            <div class="ChampionName">
+                <h2>@Model.Name </h2>
+            </div>
+            <img class="championImg" src="@Model.ImgUrl" alt="@Model.Name">
+            <div class="roleImgDiv">
+                <div class="@Model.PrimaryRole">
+                    <img class="roleImg " title="@Model.PrimaryRole" src="~/Content/images/roleIcons/@string.Format("{0}60.png", Model.PrimaryRole.ToLower())" alt="@Model.PrimaryRole" />
+                </div>
+                @if (!string.IsNullOrEmpty(Model.SecondaryRole))
+                {<div class="@Model.SecondaryRole">
+                <img class="role2Img " title="@Model.SecondaryRole" src="~/Content/images/roleIcons/@string.Format("{0}60.png", Model.SecondaryRole.ToLower())" alt="@Model.SecondaryRole" />
+            </div>
+                }
+            </div>
+        </a>
+
+    </div>
+}
